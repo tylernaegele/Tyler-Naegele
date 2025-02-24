@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-23 05:54:17 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUwzQjUxRVI7MjAyNS0wMi0xODsxMDo1NDoyMyBBTTszMjg1"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUwzQjUxRVI7MjAyNS0wMi0xODsxMTowMzowOCBBTTsxOzMzOTE="/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlNS1E1RlI7MjAyNS0wMi0yMzswNTo1NDoxNyBQTTsyOzM0Nzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <if expression="qty &gt; 10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="qty &gt; 5000">
+                        <then>
+                            <assign variable="price" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="price" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="extprice" expression="qty * price"/>
+            <assign variable="tax" expression="extprice * 0.07"/>
+            <output expression="&quot;Your extended price is $&quot; &amp; extprice" newline="True"/>
+            <output expression="&quot;Your tax is $&quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Your total is $&quot; &amp; tax + extprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

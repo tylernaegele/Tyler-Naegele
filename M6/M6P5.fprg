@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-20 11:00:44 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1MVUlUNFM7MjAyNS0wMi0yMDsxMDo1NDozMCBBTTszMzYw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLU1MVUlUNFM7MjAyNS0wMi0yMDsxMTowMDo0NCBBTTsxOzM0NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="salary" type="Integer" array="False" size=""/>
+            <declare name="level" type="Integer" array="False" size=""/>
+            <declare name="bonusrate" type="Real" array="False" size=""/>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="salary"/>
+            <input variable="level"/>
+            <if expression="level &gt;= 10">
+                <then>
+                    <assign variable="bonusrate" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="level &gt;= 5">
+                        <then>
+                            <assign variable="bonusrate" expression="0.20"/>
+                        </then>
+                        <else>
+                            <assign variable="bonusrate" expression="0.10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="bonus" expression="salary * bonusrate"/>
+            <output expression="&quot;Employee : &quot; &amp; lastname" newline="True"/>
+            <output expression="&quot;The amount of bonus they will receive is $ &quot; &amp; bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
