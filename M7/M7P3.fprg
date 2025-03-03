@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-27 10:14:40 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFGNzRTM1Y7MjAyNS0wMi0yNzsxMDowNzoyNiBBTTszMzE4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVFGNzRTM1Y7MjAyNS0wMi0yNzsxMDoxNDo0MCBBTTsxOzM0MjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="answer" type="String" array="False" size=""/>
+            <declare name="increment" type="Integer" array="False" size=""/>
+            <assign variable="increment" expression="0"/>
+            <output expression="&quot;do you want to run this loop&quot;" newline="True"/>
+            <input variable="answer"/>
+            <while expression="answer == &quot;y&quot;">
+                <assign variable="increment" expression="increment + 1"/>
+                <output expression="&quot;Do you want to run this loop again&quot;" newline="True"/>
+                <input variable="answer"/>
+            </while>
+            <output expression="&quot;done with &quot; &amp; increment &amp; &quot; loops&quot;" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
